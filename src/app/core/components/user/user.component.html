@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div *ngIf="user" class="tab-pane fade show active">
+        <div class="row">
+          <div class="col-md-6">
+            <label>User Id</label>
+          </div>
+          <div class="col-md-6">
+            <p>{{user.id}}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label>Name</label>
+          </div>
+          <div class="col-md-6">
+            <p>{{ user.name }}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label>Email</label>
+          </div>
+          <div class="col-md-6">
+            <p>{{user.email}}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label>Phone</label>
+          </div>
+          <div class="col-md-6">
+            <p>{{user.phone}}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label>Company</label>
+          </div>
+          <div class="col-md-6">
+            <p>{{user.company.name}}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label>Website</label>
+          </div>
+          <div class="col-md-6">
+            <p>{{user.website}}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label>User Posts</label>
+          </div>
+          <div class="col-md-6">
+            <a [routerLink]="['/posts', user.id]">
+              <button class="btn btn-danger">Open Posts</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

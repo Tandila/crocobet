@@ -1,1 +1,12 @@
-<p>posts works!</p>
+<div class="container-fluid">
+  <h1 class="col-12">User Posts</h1>
+  <div *ngIf="posts" class="row col-12" >
+    <div *ngFor="let post of posts" class="card" style="width: 18rem; background-color: rgba(0,0,0, 0.5);">
+      <div class="card-body">
+        <h5 class="card-title">{{ post.title }}</h5>
+        <p class="card-text">{{ post.body }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+

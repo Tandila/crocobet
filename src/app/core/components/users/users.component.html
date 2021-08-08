@@ -1,1 +1,10 @@
-<p>users works!</p>
+<div class="container-fluid">
+  <div class="row">
+    <h3 class="col-md-12">Users</h3>
+    <div *ngFor="let user of dataService.usersStore$ | async; let i = index" class="col-md-12">
+      <a [routerLink]="['users', user.id]">
+        <button style="margin: 2px" class="btn btn-secondary">{{i + 1}} {{user.name}}</button>
+      </a>
+    </div>
+  </div>
+</div>
